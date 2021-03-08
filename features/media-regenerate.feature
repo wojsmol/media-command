@@ -12,7 +12,7 @@ Feature: Regenerate WordPress attachments
       """
     And the return code should be 0
 
-  @require-wp-5.3
+  @require-wp-5.3 @broken
   Scenario: Regenerate all images default behavior
     Given download:
       | path                             | url                                               |
@@ -1289,7 +1289,7 @@ Feature: Regenerate WordPress attachments
       """
     And STDERR should be empty
 
-  @require-extension-imagick @broken
+  @require-extension-imagick
   Scenario: Regenerate image uploaded with no sizes metadata
     Given download:
       | path                             | url                                               |
